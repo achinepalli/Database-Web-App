@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% set active_page = "productions" %}
+
+
+## This is the page where a user can edit a production
+
+<h2>Production Console</h3>
+
+<form method="POST" action="/productionconsole">
+    <p>Which production would you like to manage?</p>
+    <p><select name="prod2edit" required>
+        {% for p in productionlist %}
+        <option> {{ p[0] }} - {{ p[1] }} </option>
+        {% endfor %} 
+    </p>
+    <input type="submit" value="Manage Production">
+</form>
+
+{% endblock %}
