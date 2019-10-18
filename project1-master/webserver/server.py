@@ -7,7 +7,6 @@ webserver
 To run locally
     python server.py
 
-http://localhost:8111 in your browser
 """
 
 import os
